@@ -48,7 +48,7 @@ jobs:
         run: |
           aws deploy push --application-name Codedeploy-application \
           --s3-location s3://codedepo-s3/staging-build.zip \
-          --region us-east-2
+          --region ap-south-1
 
       - name: Create deployment in CodeDeploy
         run: |
