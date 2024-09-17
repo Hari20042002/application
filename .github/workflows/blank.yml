@@ -11,20 +11,19 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-        
+
       - name: Install dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y zip unzip
           sync; echo 3 | sudo tee /proc/sys/vm/drop_caches && free -h
 
-      - name: Build for staging
+      - name: Zip files
         run: |
-          CI=false npm run build:staging
-          zip -r build.zip build
+          zip -r build.zip .
 
       - name: Upload build artifact
-        uses: actions/upload-artifact@v3  # Updated to v3
+        uses: actions/upload-artifact@v3
         with:
           name: build.zip
           path: build.zip
@@ -34,7 +33,7 @@ jobs:
     needs: staging-build
     steps:
       - name: Download build artifact
-        uses: actions/download-artifact@v3  # Updated to v3
+        uses: actions/download-artifact@v3
         with:
           name: build.zip
           path: build.zip
