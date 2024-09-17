@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:staging": "npm run build",
-    "build": "webpack --config webpack.config.js",
+    "build:staging": "echo 'Building for staging...'",  // Placeholder script for staging build
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
