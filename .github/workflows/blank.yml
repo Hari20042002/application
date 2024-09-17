@@ -1,4 +1,4 @@
-name: Staging Deployment
+name: Test Deployment
 
 on:
   push:
@@ -25,7 +25,7 @@ jobs:
           zip -r build.zip build
 
       - name: Upload build artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3  # Updated to v3
         with:
           name: build.zip
           path: build.zip
@@ -35,7 +35,7 @@ jobs:
     needs: staging-build
     steps:
       - name: Download build artifact
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3  # Updated to v3
         with:
           name: build.zip
           path: build.zip
