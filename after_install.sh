@@ -4,9 +4,9 @@
 set -e
 
 # Navigate to the application directory
-cd /var/www/html/testdir
+cd /var/www/html/testdir/application
 
-sudo chmod +x /var/www/html/testdir/start_server.sh
-sudo chmod +x /var/www/html/testdir/before_install.sh
-sudo chmod +x /var/www/html/testdir/after_install.sh
+sudo chmod +x /var/www/html/testdir/application/start_server.sh
+sudo chmod +x /var/www/html/testdir/application/before_install.sh
+sudo chmod +x /var/www/html/testdir/application/after_install.sh
 
