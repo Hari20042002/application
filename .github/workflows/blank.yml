@@ -47,12 +47,12 @@ jobs:
       - name: Push build to S3
         run: |
           aws deploy push --application-name Codedeploy-application \
-          --s3-location s3://codedepo-s3/staging-build.zip \
+          --s3-location s3://codedepo-s3/build.zip \
           --region ap-south-1
 
       - name: Create deployment in CodeDeploy
         run: |
           aws deploy create-deployment --application-name Codedeploy-application \
-          --s3-location bucket=codedepo-s3,key=staging-build.zip,bundleType=zip \
+          --s3-location bucket=codedepo-s3,key=build.zip,bundleType=zip \
           --deployment-group-name Codedeploy-DG \
           --deployment-config-name CodeDeployDefault.AllAtOnce
