@@ -4,4 +4,4 @@
 set -e
 
 # Remove existing application files and directories
-rm -rf /var/www/html/testdir/application/*
+rm -rf /var/www/html/aitdir/application/*
