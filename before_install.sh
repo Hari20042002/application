@@ -4,4 +4,4 @@
 set -e
 
 # Remove existing application files and directories
-sudo rm -rf /opt/Test/application/*
+sudo rm -rf /var/www/html/testdir*
