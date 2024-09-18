@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /var/www/html/testdir
+    destination: /var/www/html/testdir/application
 hooks:
   BeforeInstall:
     - location: before_install.sh
