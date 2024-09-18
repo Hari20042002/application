@@ -32,7 +32,6 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: build.zip
-          path: build.zip
 
       - name: Install AWS CLI
         run: |
