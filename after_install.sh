@@ -6,5 +6,7 @@ set -e
 # Navigate to the application directory
 cd /opt/Test/application
 
-# Install npm
-npm install
+sudo chmod +x /opt/Test/application/start_server.sh
+sudo chmod +x /opt/Test/application/before_install.sh
+sudo chmod +x /opt/Test/application/after_install.sh
+
