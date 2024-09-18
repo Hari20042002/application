@@ -6,9 +6,6 @@ set -e
 # Navigate to the application directory
 cd /opt/Test/application
 
-# Assigning ownership permission
-sudo chown -R ubuntu:ubuntu /opt/Test/application
-
 # Restart the Nginx weserver
 sudo systemctl restart nginx
 
