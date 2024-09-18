@@ -4,7 +4,7 @@
 set -e
 
 # Navigate to the application directory
-cd /opt/Test/demo-php
+cd /opt/Test/application
 
 # Install npm
 npm install
