@@ -4,7 +4,7 @@
 set -e
 
 # Navigate to the application directory
-cd /opt/Test/application
+cd /var/www/html/testdir
 
 # Restart the Nginx weserver
 sudo systemctl restart nginx
