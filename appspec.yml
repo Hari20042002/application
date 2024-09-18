@@ -2,17 +2,17 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /opt/Test/application
+    destination: /var/www/html/testdir
 hooks:
   BeforeInstall:
     - location: before_install.sh
       timeout: 300
-      runas: root
+      runas: testuser
   AfterInstall:
     - location: after_install.sh
       timeout: 300
-      runas: root
+      runas: testuser
   ApplicationStart:
     - location: start_server.sh
       timeout: 300
-      runas: root
+      runas: testuser
