@@ -7,12 +7,12 @@ hooks:
   BeforeInstall:
     - location: before_install.sh
       timeout: 300
-      runas: root
+      runas: aituser
   AfterInstall:
     - location: after_install.sh
       timeout: 300
-      runas: root
+      runas: aituser
   ApplicationStart:
     - location: start_server.sh
       timeout: 300
-      runas: root
+      runas: aituser
